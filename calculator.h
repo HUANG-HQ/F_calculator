@@ -40,4 +40,3 @@ calculator_nt calculate_W1(calculator_nt cal_variable)
 }
 
 #endif
-#pragma once

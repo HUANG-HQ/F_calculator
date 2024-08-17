@@ -85,4 +85,4 @@ int Mode_1change0(int calcu_WorF)
     return calcu_WorF;
 }
 
-#endif#pragma once
+#endif
