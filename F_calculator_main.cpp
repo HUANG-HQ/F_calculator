@@ -89,7 +89,7 @@ int main() {
                     if (calcu_WorF == 0) break;
                     calcu_WorF = Mode_1change0(calcu_WorF);
                 }
-                if (msg.x >= 600 && msg.x <= 700 && msg.y >= 370 && msg.y <= 405)
+                if (msg.x >= 600 && msg.x <= 700 && msg.y >= 370 && msg.y <= 405)//计算开始
                     Start_Calculate(calcu_member, calcu_WorF);
                 if (msg.x >= 580 && msg.x <= 635 && msg.y >= 135 && msg.y <= 175 && calcu_WorF == 0)//算气缸力时允许键入W1
                     calcu_member.W1 = Enter_data(580, 135, 55, 40);

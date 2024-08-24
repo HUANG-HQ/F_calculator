@@ -48,13 +48,17 @@ void Start_Calculate(calculator_nt calcu_member, int calcu_WorF)
     {
         wchar_t str[20]; swprintf_s(str, L"%lf", calcu_member.Cylinder_F);
         wchar_t str_fai[20]; swprintf_s(str_fai, L"%lf", calcu_member.fai1);
+        wchar_t str_FMAX[20]; swprintf_s(str_FMAX, L"%lf", calcu_member.Cylinder_F_MAX);
         outtextxy(780 + ((55 - textwidth(str_fai)) / 2), 315 + (30 - textheight(str_fai)) / 2, str_fai);//居中绘制计算中间值fai
-        outtextxy(40 + ((510 - textwidth(str)) / 2), 370 + (35 - textheight(str)) / 2, str);//居中绘制文字,输出气缸力
+        outtextxy(40, 360 + (35 - textheight(str)) / 2, L"所需气缸力为：");//气缸力文字
+        outtextxy(40, 380 + (35 - textheight(str_FMAX)) / 2, L"所选气缸最大输出力的85%为：：");//所选气缸能力文字
+        outtextxy(40 + ((510 - textwidth(str)) / 2), 360 + (35 - textheight(str)) / 2, str);//居中绘制文字,输出气缸力
+        outtextxy(40 + ((510 - textwidth(str_FMAX)) / 2), 380 + (35 - textheight(str_FMAX)) / 2, str_FMAX);//居中绘制文字,输出该气缸最大气缸力
     }
     else
     {
-        wchar_t str[20]; swprintf_s(str, L"%lf", calcu_member.W1);
         wchar_t str_fai[20]; swprintf_s(str_fai, L"%lf", calcu_member.fai1);
+        wchar_t str[20]; swprintf_s(str, L"%lf", calcu_member.W1);
         outtextxy(780 + ((55 - textwidth(str_fai)) / 2), 315 + (30 - textheight(str_fai)) / 2, str_fai);//居中绘制计算中间值fai
         outtextxy(40 + ((510 - textwidth(str)) / 2), 370 + (35 - textheight(str)) / 2, str);//居中绘制文字,输出负载
     }
